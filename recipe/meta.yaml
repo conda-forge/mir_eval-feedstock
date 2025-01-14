@@ -6,26 +6,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: f87310e326ad9f80ba65e3f0d1ced2013a2845016fc51d7af56c79195668d216
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install .  -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
   run:
     - future
     - numpy >=1.7.0
-    - python
+    - python >={{ python_min }}
     - scipy >=1.0.0
     - six
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - mir_eval
 
