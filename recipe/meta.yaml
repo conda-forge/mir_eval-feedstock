@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: e1febaa5766c65a7545c2a170b241490f47a98987370b1e06742424c5debe65e
 
 build:
@@ -18,6 +18,7 @@ requirements:
   host:
     - pip
     - python >=3.7
+    - setuptools >=48
   run:
     - future
     - numpy >=1.7.0, <1.24.0
@@ -26,6 +27,8 @@ requirements:
     - six
 
 test:
+  requires:
+    - python >=3.7
   imports:
     - mir_eval
 
