@@ -3,15 +3,15 @@ About mir_eval-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mir_eval-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/craffel/mir_eval
+Home: https://github.com/mir-evaluation/mir_eval
 
 Package license: MIT
 
 Summary: Common metrics for common audio/music processing tasks.
 
-Development: https://github.com/craffel/mir_eval
+Development: https://github.com/mir-evaluation/mir_eval
 
-Documentation: http://craffel.github.io/mir_eval/
+Documentation: http://mir-evaluation.github.io/mir_eval/
 
 Current build status
 ====================
@@ -147,6 +147,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@bmcfee](https://github.com/bmcfee/)
 * [@ndmaxar](https://github.com/ndmaxar/)
 * [@oblute](https://github.com/oblute/)
 * [@rluria14](https://github.com/rluria14/)

@@ -1,5 +1,5 @@
 {% set name = "mir_eval" %}
-{% set version = "0.6" %}
+{% set version = "0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f87310e326ad9f80ba65e3f0d1ced2013a2845016fc51d7af56c79195668d216
+  sha256: e1febaa5766c65a7545c2a170b241490f47a98987370b1e06742424c5debe65e
 
 build:
   noarch: python
@@ -20,7 +20,7 @@ requirements:
     - python
   run:
     - future
-    - numpy >=1.7.0
+    - numpy >=1.7.0, <1.24.0
     - python
     - scipy >=1.0.0
     - six
@@ -30,16 +30,17 @@ test:
     - mir_eval
 
 about:
-  home: https://github.com/craffel/mir_eval
+  home: https://github.com/mir-evaluation/mir_eval
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
   summary: "Common metrics for common audio/music processing tasks."
-  doc_url: http://craffel.github.io/mir_eval/
-  dev_url: https://github.com/craffel/mir_eval
+  doc_url: http://mir-evaluation.github.io/mir_eval/
+  dev_url: https://github.com/mir-evaluation/mir_eval
 
 extra:
   recipe-maintainers:
     - oblute
     - rluria14
     - ndmaxar
+    - bmcfee
