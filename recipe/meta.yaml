@@ -1,6 +1,6 @@
 {% set name = "mir_eval" %}
-{% set version = "0.7" %}
-{% set python_min = "3.7" %}
+{% set version = "0.8" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e1febaa5766c65a7545c2a170b241490f47a98987370b1e06742424c5debe65e
+  sha256: 8406708cd4773a0b778fe058a95d76365d28666b150563b3599ef823ac2082e8
 
 build:
   noarch: python
@@ -21,11 +21,10 @@ requirements:
     - python {{ python_min }}
     - setuptools >=48
   run:
-    - future
-    - numpy >=1.7.0, <1.24.0
+    - numpy >=1.7.0
     - python >={{ python_min }}
     - scipy >=1.0.0
-    - six
+    - decorator
 
 test:
   requires:
