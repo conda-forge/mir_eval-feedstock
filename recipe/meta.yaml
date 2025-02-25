@@ -1,5 +1,5 @@
 {% set name = "mir_eval" %}
-{% set version = "0.8.1" %}
+{% set version = "0.8.2" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cf148f32c41589e9b26210034c88a04e6614a6c3f89be9cfd954b0e6c3adec52
+  sha256: 141a3e1193276889fc32e911547e73dcb3e829ee8cfea60f7bbcd633c0792569
 
 build:
   noarch: python
